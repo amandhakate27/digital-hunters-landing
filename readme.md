@@ -42,6 +42,6 @@ project-1/
 - Remix Icon integration for iconography
 
 ## Live Demo
-[see here]()
+[see here](https://digital-hunters-landing.vercel.app/)
 
 Made as part of the @sharyians Coding School UI practice curriculum.
