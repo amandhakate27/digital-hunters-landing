@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    background-color: #01080e;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.hero-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 2rem;
+    background-image: url('./assets/herobg.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    margin-left: 2.5rem;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.navlinks a:hover {
+    color: #00ffd0;
+    transform: scale(1.3);
+}
+
+.contact-btn {
+    background: transparent;
+    color: white;
+    padding: .8rem 1.5rem;
+    border: 2px solid #00ffd0;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: inset 60px 0 40px -20px #00ffd0;
+}
+
+.contact-btn span i {
+    margin-left: 0.5rem;
+    color: #00ffd0;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 100px);
+}
+
+.left-part {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    z-index: 2;
+}
+
+.left-part .span {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #00ffd0;
+}
+
+.left-part h1 {
+    font-family: 'Orbitron', sans-serif;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+h1 .digital {
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+h1 .hunters {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #00ffd0;
+
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #999;
+    margin-bottom: 1.5rem;
+}
+
+.desc {
+    color: #999;
+    font-size: 15px;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.buttons button,
+.cta button {
+    background: transparent;
+    color: white;
+    padding: .8rem 1rem;
+    border: 2px solid #00ffd0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: inset -50px 0 40px -20px #00ffd0;
+}
+
+.buttons button span i,
+.cta button span i {
+    margin-left: 1.5rem;
+}
+
+.play {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.play div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #00ffd0;
+}
+
+.play span {
+    color: #999;
+    font-size: 15px;
+}
+
+.center-part {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: stretch;
+    position: relative;
+    z-index: 1;
+}
+
+.hunter-image {
+    height: 90vh;
+    object-fit: contain;
+    position: absolute;
+    bottom: -2rem;
+    pointer-events: none;
+}
+
+.right-part {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.game-utility {
+    width: 100%;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+/* stats section */
+
+.stats-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -5px;
+    /* Overlaps the hero section */
+    position: relative;
+    z-index: 10;
+
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 10px 30px #00000080;
+}
+
+.metal-icon {
+    height: 180px;
+    width: auto;
+    object-fit: contain;
+}
+
+.left-icon {
+    position: absolute;
+    left: 20px;
+    top: -20px;
+}
+
+.right-icon {
+    position: absolute;
+    top: -50px;
+    right: 0px;
+}
+
+.stats-glass-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-grow: 1; */
+    margin: 0 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.stat-item:not(.no-border)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50px;
+    background-color: #ffffff33;
+}
+
+.stat-item h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #00ffd0;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 0.85rem;
+    color: #999;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+
+/* projects section */
+
+.project-section {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.projects-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-section .title {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-section .title span {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #00ffd0;
+}
+
+.project-section .title h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+}
+
+.back-forward-btns {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    right: 2rem;
+}
+
+.back-forward-btns button {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-btn {
+    border: 1px solid #999;
+    color: #999;
+}
+
+.forward-btn {
+    border: 2px solid #00ffd0;
+    color: #00ffd0;
+}
+
+.project-container {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 0.5rem;
+}
+
+.project-box {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 20px;
+    border: 1px solid #00ffd0;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.project-image button {
+    position: absolute;
+    bottom: 1rem;
+    bottom: 10px;
+    left: 20px;
+    background: transparent;
+    color: white;
+    padding: .3rem 1rem;
+    border: 1px solid #00ffd0;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #0000006d;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.project-desc {
+    padding: 0 1rem;
+    color: #999;
+    font-size: 15px;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.company-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.company-icons span i {
+    font-size: 1.5rem;
+}
+
+.company-icons span .icon1 {
+    color: #00ffd0;
+}
+
+.checkout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #00ffd0;
+}
+
+.checkout span i {
+    font-size: 1.5rem;
+    color: #00ffd0;
+}
+
+.process-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.process-section .process-heading h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.process-section .process-heading h2 span {
+    color: #00ffd0;
+}
+
+.processes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    gap: 1rem;
+}
+
+.process {
+    min-width: 200px;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border: .5px solid #00ffd070;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.process-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #00ffd0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset -10px 0 15px -10px #00ffd0;
+}
+
+.process-icon i {
+    color: #00ffd0;
+    font-size: 1.5rem;
+}
+
+.process-desc {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.process-desc span {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #00ffd0;
+}
+
+.process-desc h3 {
+    font-size: .8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.process-desc p {
+    color: #999;
+    font-size: 14px;
+}
+
+.cta-section-footer {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    border: 1px solid #00ffd074;
+    border-radius: 15px;
+    background-image: url('./assets/foot-img.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+.cta-section-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #01080ec7;
+    z-index: 0;
+}
+
+.cta-section-footer>* {
+    position: relative;
+    z-index: 1;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.cta h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+}
+
+.cta h2 span {
+    color: #00ffd0;
+}
+
+.cta p {
+    color: #999;
+    font-size: 15px;
+}
+
+.cta button {
+    width: fit-content;
+}
+
+.footer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer .socials img {
+    width: 200px;
+}
+
+.footer .socials p {
+    color: #999;
+    font-size: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons span {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #00ffd0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #00ffd0;
+}
+
+.social-icons span:nth-child(2) i {
+    color: #00ffd0;
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-us h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #00ffd0;
+}
+
+.contact-us span i {
+    color: #999;
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+}
+
+.contact-us p {
+    color: #999;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.empty-div {
+    width: 1px;
+    height: 100px;
+    background-color: #00ffd033;
+
+}
+
+footer {
+    padding: 0 6rem;
+    ;
+    width: 100%;
+    height: 150px;
+    background-color: #01080e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+footer p {
+    color: #999;
+    font-size: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 15px;
+}
